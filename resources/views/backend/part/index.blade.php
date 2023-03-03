@@ -35,7 +35,9 @@
                                     <th class="checkbox-column text-center"> ID </th>
                                     <th class="text-center">Name</th>
                                     <th class="text-center">China Price</th>
-                                    <th class="text-center">Taiwan Price</th>
+                                    @if(!$part->category=='disk') <th class="text-center">Taiwan Price</th> @endif
+                                    @if($part->category=='arm' || $part->category=='shocker' || $part->category=='disk') <th class="text-center">Japan Price</th> @endif
+                                    @if( $part->category=='shocker') <th class="text-center">KYB Price</th> @endif
                                     <th class="text-center">Category</th>
                                     <th class="text-center">Action</th>
                                 </tr>
@@ -46,7 +48,9 @@
                                     <td class="checkbox-column text-center"> {{$part->id}} </td>
                                     <td class="text-center">{{$part->name}}</td>
                                     <td class="text-center">{{$part->china_price}}</td>
-                                    <td class="text-center">{{$part->taiwan_price}}</td>
+                                    @if(!$part->category=='disk') <td class="text-center">{{$part->taiwan_price}}</td> @endif
+                                    @if($part->category=='arm' || $part->category=='shocker' || $part->category=='disk') <td class="text-center">{{$part->japan_price}}</td> @endif
+                                    @if( $part->category=='shocker') <td class="text-center">{{$part->kyb_price}}</td> @endif
                                     <td class="text-center">{{$part->category}}</td>
                                     <td class="text-center">
                                         <ul class="table-controls">
