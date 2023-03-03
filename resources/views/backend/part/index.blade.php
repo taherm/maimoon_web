@@ -36,9 +36,9 @@
                                     <th class="text-center">Name</th>
                                     <th class="text-center">Part Number</th>
                                     <th class="text-center">China Price</th>
-                                    @if(!category=='disk') <th class="text-center">Taiwan Price</th> @endif
-                                    @if(category=='arm' || category=='shocker' || category=='disk') <th class="text-center">Japan Price</th> @endif
-                                    @if(category=='shocker') <th class="text-center">KYB Price</th> @endif
+                                    @if(!$category=='disk') <th class="text-center">Taiwan Price</th> @endif
+                                    @if($category=='arm' || category=='shocker' || category=='disk') <th class="text-center">Japan Price</th> @endif
+                                    @if($category=='shocker') <th class="text-center">KYB Price</th> @endif
                                     <th class="text-center">Category</th>
                                     <th class="text-center">Action</th>
                                 </tr>
