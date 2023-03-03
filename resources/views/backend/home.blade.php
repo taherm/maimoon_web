@@ -5,15 +5,15 @@
 
         <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-12 layout-spacing">
             <div class="widget widget-account-invoice-one">
-                <div class="widget-heading">
+                <!-- <div class="widget-heading">
                     <h2 class=""><u>Statistics</u></h2>
-                </div>
+                </div> -->
 
                 <div class="widget-content">
                     <div class="invoice-box">
                         <div class="acc-total-info">
                             <h5>Total Parts</h5>
-                            <p class="acc-amount"></p>
+                            <p class="acc-amount">{{$parts_count}}</p>
                         </div>
 
                         <!-- <div class="inv-detail">

@@ -12,13 +12,13 @@
  <div class="header-container fixed-top">
      <header class="header navbar navbar-expand-sm">
          <ul class="navbar-item theme-brand flex-row text-center">
-             <!-- <li class="nav-item theme-logo">
+             <li class="nav-item theme-logo">
                  <a href="index.html">
                      <img src="{{asset('backend/assets/img/logo.svg')}}" class="navbar-logo" alt="logo">
                  </a>
-             </li> -->
+             </li>
              <li class="nav-item theme-text">
-                 <a href="{{route('index')}}" class="nav-link"> Maimoon </a>
+                 <a href="{{route('index')}}" class="nav-link"> Maimoon Spare Parts </a>
              </li>
 
          </ul>
