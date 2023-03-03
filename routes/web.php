@@ -13,6 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+// Backend Routes
+Route::namespace('App\Http\Controllers\backend')->group(function () {
+    Route::get('/', BackendHome::class)->name('index');
+    Route::resource('part', PartController::class);
+    Route::get('/delete_part/{part}', [App\Http\Controllers\backend\PartController::class, 'destroy'])->name('delete_part');
 });
