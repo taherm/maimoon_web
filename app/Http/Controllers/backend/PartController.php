@@ -111,6 +111,7 @@ class PartController extends Controller
     public function category_parts(Request $request)
     {
         $parts = Part::where('category', $request->category)->get();
-        return view('backend.part.index', compact('parts'));
+        $category = $request->category;
+        return view('backend.part.index', compact('parts', 'category'));
     }
 }
