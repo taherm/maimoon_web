@@ -16,9 +16,12 @@ class CreatePartsTable extends Migration
         Schema::create('parts', function (Blueprint $table) {
             $table->id();
             $table->longText('name');
+            $table->longText('part_number');
             $table->string('image')->nullable();
             $table->double('china_price', 21, 2);
             $table->double('taiwan_price', 21, 2);
+            $table->double('kyb_price', 21, 2);
+            $table->double('japan_price', 21, 2);
             $table->string('category');
             $table->timestamps();
         });

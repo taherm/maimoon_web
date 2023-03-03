@@ -25,6 +25,15 @@
                                     @enderror
                                 </div>
 
+
+                                <div class="form-group col-md-12">
+                                    <label for="inputEmail4">Part Number</label>
+                                    <input type="text" class="form-control" name="part_number" id="inputEmail4" value="{{$part->part_number}}" required>
+                                    @error('part_number')
+                                    <div class="alert alert-danger">{{ $message }}</div>
+                                    @enderror
+                                </div>
+
                                 <div class="form-group col-md-12">
                                     <label for="inputEmail4">China Price</label>
                                     <input type="text" class="form-control" name="china_price" id="inputEmail4" value="{{$part->china_price}}">
@@ -37,6 +46,22 @@
                                     <label for="inputEmail4">Taiwan Price</label>
                                     <input type="text" class="form-control" name="taiwan_price" id="inputEmail4" value="{{$part->taiwan_price}}">
                                     @error('taiwan_price')
+                                    <div class="alert alert-danger">{{ $message }}</div>
+                                    @enderror
+                                </div>
+
+                                <div class="form-group col-md-12">
+                                    <label for="inputEmail4">KYB Price</label>
+                                    <input type="text" class="form-control" name="kyb_price" id="inputEmail4" placeholder="" value="{{$part->kyb_price}}">
+                                    @error('kyb_price')
+                                    <div class="alert alert-danger">{{ $message }}</div>
+                                    @enderror
+                                </div>
+
+                                <div class="form-group col-md-12">
+                                    <label for="inputEmail4">Japan Price</label>
+                                    <input type="text" class="form-control" name="japan_price" id="inputEmail4" placeholder="" value="{{$part->japan_price}}">
+                                    @error('japan_price')
                                     <div class="alert alert-danger">{{ $message }}</div>
                                     @enderror
                                 </div>

@@ -7,6 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Part extends Model
 {
-    protected $fillable = ['name', 'china_price', 'taiwan_price', 'category'];
+    protected $fillable = ['name', 'china_price', 'taiwan_price', 'category', 'kyb_price', 'japan_price', 'part_number'];
     use HasFactory;
 }
