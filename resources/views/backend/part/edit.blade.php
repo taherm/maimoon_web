@@ -24,15 +24,35 @@
                                     <div class="alert alert-danger">{{ $message }}</div>
                                     @enderror
                                 </div>
+
                                 <div class="form-group col-md-12">
-                                    <label for="inputEmail4">Price</label>
-                                    <input type="text" class="form-control" name="price" id="inputEmail4" value="{{$part->price}}" required>
-                                    @error('price')
+                                    <label for="inputEmail4">China Price</label>
+                                    <input type="text" class="form-control" name="china_price" id="inputEmail4" value="{{$part->china_price}}" required>
+                                    @error('china_price')
                                     <div class="alert alert-danger">{{ $message }}</div>
                                     @enderror
                                 </div>
+
+                                <div class="form-group col-md-12">
+                                    <label for="inputEmail4">Taiwan Price</label>
+                                    <input type="text" class="form-control" name="taiwan_price" id="inputEmail4" value="{{$part->taiwan_price}}" required>
+                                    @error('taiwan_price')
+                                    <div class="alert alert-danger">{{ $message }}</div>
+                                    @enderror
+                                </div>
+
+
+                                <div class="form-group col-md-12">
+                                    <label for="inputState">Category</label>
+                                    <select id="inputState" name="category" class="form-control" required>
+                                        <option value="raditor" {{ $part->category == 'raditor' ? 'selected' : '' }}>Raditor</option>
+                                        <option value="disk" {{ $part->category == 'disk' ? 'selected' : '' }}>Disk</option>
+                                        <option value="arm" {{ $part->category == 'arm' ? 'selected' : '' }}>Arm</option>
+                                        <option value="shocker" {{ $part->category == 'shocker' ? 'selected' : '' }}>Shocker</option>
+                                    </select>
+                                </div>
                             </div>
-                            <button type="submit" class="btn btn-primary mt-3">Edit Portfolio</button>
+                            <button type="submit" class="btn btn-primary mt-3">Edit Part</button>
                         </form>
                     </div>
                 </div>

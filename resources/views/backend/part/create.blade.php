@@ -25,11 +25,30 @@
                                 </div>
 
                                 <div class="form-group col-md-12">
-                                    <label for="inputEmail4">Price</label>
-                                    <input type="text" class="form-control" name="price" id="inputEmail4" placeholder="" required>
-                                    @error('price')
+                                    <label for="inputEmail4">China Price</label>
+                                    <input type="text" class="form-control" name="china_price" id="inputEmail4" placeholder="" required>
+                                    @error('china_price')
                                     <div class="alert alert-danger">{{ $message }}</div>
                                     @enderror
+                                </div>
+
+                                <div class="form-group col-md-12">
+                                    <label for="inputEmail4">Taiwan Price</label>
+                                    <input type="text" class="form-control" name="taiwan_price" id="inputEmail4" placeholder="" required>
+                                    @error('taiwan_price')
+                                    <div class="alert alert-danger">{{ $message }}</div>
+                                    @enderror
+                                </div>
+
+
+                                <div class="form-group col-md-12">
+                                    <label for="inputState">Category</label>
+                                    <select id="inputState" name="category" class="form-control" required>
+                                        <option value="raditor">Raditor</option>
+                                        <option value="disk">Disk</option>
+                                        <option value="arm">Arm</option>
+                                        <option value="shocker">Shocker</option>
+                                    </select>
                                 </div>
                             </div>
                             <button type="submit" class="btn btn-primary mt-3">Add Part</button>

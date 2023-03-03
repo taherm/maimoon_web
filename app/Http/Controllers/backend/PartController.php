@@ -40,7 +40,6 @@ class PartController extends Controller
     {
         $validatedData = $request->validate([
             'name' => 'required|min:2',
-            'price' => 'required|numeric'
         ]);
 
         $data = $request->except('_token');
@@ -81,8 +80,7 @@ class PartController extends Controller
     public function update(Request $request, Part $part)
     {
         $validatedData = $request->validate([
-            'name' => 'required|min:2',
-            'price' => 'required|numeric',
+            'name' => 'required|min:2'
         ]);
 
         // Retrieve all records from request.

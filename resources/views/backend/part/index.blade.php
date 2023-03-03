@@ -34,9 +34,9 @@
                                 <tr>
                                     <th class="checkbox-column text-center"> ID </th>
                                     <th class="text-center">Name</th>
-                                    <th class="text-center">Price</th>
-                                    <th class="text-center">Date Added</th>
-                                    <th class="text-center">Date Updated</th>
+                                    <th class="text-center">China Price</th>
+                                    <th class="text-center">Taiwan Price</th>
+                                    <th class="text-center">Category</th>
                                     <th class="text-center">Action</th>
                                 </tr>
                             </thead>
@@ -45,9 +45,9 @@
                                 <tr>
                                     <td class="checkbox-column text-center"> {{$part->id}} </td>
                                     <td class="text-center">{{$part->name}}</td>
-                                    <td class="text-center">{{$part->price}}</td>
-                                    <td class="text-center">{{$part->created_at}}</td>
-                                    <td class="text-center">{{$part->updated_at}}</td>
+                                    <td class="text-center">{{$part->china_price}}</td>
+                                    <td class="text-center">{{$part->taiwan_price}}</td>
+                                    <td class="text-center">{{$part->category}}</td>
                                     <td class="text-center">
                                         <ul class="table-controls">
                                             <li><a href="{{ route('part.edit', $part->id) }}" class="bs-tooltip" data-toggle="tooltip" data-placement="top" title="" data-original-title="{{__('Edit')}}"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-edit-2 p-1 br-6 mb-1">

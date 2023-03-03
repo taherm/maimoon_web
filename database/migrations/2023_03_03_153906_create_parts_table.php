@@ -17,7 +17,9 @@ class CreatePartsTable extends Migration
             $table->id();
             $table->longText('name');
             $table->string('image')->nullable();
-            $table->double('price', 21, 2);
+            $table->double('china_price', 21, 2);
+            $table->double('taiwan_price', 21, 2);
+            $table->string('category');
             $table->timestamps();
         });
     }
