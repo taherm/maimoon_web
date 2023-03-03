@@ -26,7 +26,7 @@
 
                                 <div class="form-group col-md-12">
                                     <label for="inputEmail4">China Price</label>
-                                    <input type="text" class="form-control" name="china_price" id="inputEmail4" placeholder="" required>
+                                    <input type="text" class="form-control" name="china_price" id="inputEmail4" placeholder="">
                                     @error('china_price')
                                     <div class="alert alert-danger">{{ $message }}</div>
                                     @enderror
@@ -34,7 +34,7 @@
 
                                 <div class="form-group col-md-12">
                                     <label for="inputEmail4">Taiwan Price</label>
-                                    <input type="text" class="form-control" name="taiwan_price" id="inputEmail4" placeholder="" required>
+                                    <input type="text" class="form-control" name="taiwan_price" id="inputEmail4" placeholder="">
                                     @error('taiwan_price')
                                     <div class="alert alert-danger">{{ $message }}</div>
                                     @enderror

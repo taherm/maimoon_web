@@ -27,7 +27,7 @@
 
                                 <div class="form-group col-md-12">
                                     <label for="inputEmail4">China Price</label>
-                                    <input type="text" class="form-control" name="china_price" id="inputEmail4" value="{{$part->china_price}}" required>
+                                    <input type="text" class="form-control" name="china_price" id="inputEmail4" value="{{$part->china_price}}">
                                     @error('china_price')
                                     <div class="alert alert-danger">{{ $message }}</div>
                                     @enderror
@@ -35,7 +35,7 @@
 
                                 <div class="form-group col-md-12">
                                     <label for="inputEmail4">Taiwan Price</label>
-                                    <input type="text" class="form-control" name="taiwan_price" id="inputEmail4" value="{{$part->taiwan_price}}" required>
+                                    <input type="text" class="form-control" name="taiwan_price" id="inputEmail4" value="{{$part->taiwan_price}}">
                                     @error('taiwan_price')
                                     <div class="alert alert-danger">{{ $message }}</div>
                                     @enderror
