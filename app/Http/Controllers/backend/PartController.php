@@ -107,4 +107,10 @@ class PartController extends Controller
         session()->flash('error', 'Part Deleted!');
         return redirect(route('part.index'));
     }
+
+    public function category_parts(Request $request)
+    {
+        $parts = Part::where('category', $request->category)->get();
+        return view('backend.part.index', compact('parts'));
+    }
 }
