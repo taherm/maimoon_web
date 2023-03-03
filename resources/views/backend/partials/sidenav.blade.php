@@ -28,9 +28,9 @@
                     </div>
                 </a>
                 <ul class="collapse submenu list-unstyled" id="client" data-parent="#accordionExample">
-                    <li>
+                    <!-- <li>
                         <a href="{{route('part.index')}}"> All Parts </a>
-                    </li>
+                    </li> -->
                     <li>
                         <a href="{{route('part.create')}}"> Add Part </a>
                     </li>

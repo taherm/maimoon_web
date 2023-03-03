@@ -45,7 +45,7 @@ class PartController extends Controller
         $data = $request->except('_token');
         $part = $part->create($data);
         session()->flash('message', 'Part Added!');
-        return redirect(route('part.index'));
+        return redirect(route('index'));
     }
 
     /**
@@ -90,7 +90,7 @@ class PartController extends Controller
 
         $part->update($data);
         session()->flash('message', 'Part Updated!');
-        return redirect(route('part.index'));
+        return redirect(route('index'));
     }
 
     /**
