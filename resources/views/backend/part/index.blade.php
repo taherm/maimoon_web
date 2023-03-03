@@ -36,7 +36,7 @@
                                     <th class="text-center">Name</th>
                                     <th class="text-center">Part Number</th>
                                     <th class="text-center">China Price</th>
-                                    @if(!$category=='disk') <th class="text-center">Taiwan Price</th> @endif
+                                    @unless($category=='disk') <th class="text-center">Taiwan Price</th> @endunless
                                     @if($category=='arm' || $category=='shocker' || $category=='disk') <th class="text-center">Japan Price</th> @endif
                                     @if($category=='shocker') <th class="text-center">KYB Price</th> @endif
                                     <th class="text-center">Category</th>
@@ -50,7 +50,7 @@
                                     <td class="text-center">{{$part->name}}</td>
                                     <td class="text-center">{{$part->part_number}}</td>
                                     <td class="text-center">{{$part->china_price}}</td>
-                                    @if(!$part->category=='disk') <td class="text-center">{{$part->taiwan_price}}</td> @endif
+                                    @unless($part->category=='disk') <td class="text-center">{{$part->taiwan_price}}</td> @endunless
                                     @if($part->category=='arm' || $part->category=='shocker' || $part->category=='disk') <td class="text-center">{{$part->japan_price}}</td> @endif
                                     @if( $part->category=='shocker') <td class="text-center">{{$part->kyb_price}}</td> @endif
                                     <td class="text-center">{{$part->category}}</td>
