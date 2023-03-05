@@ -105,7 +105,7 @@ class PartController extends Controller
         $part->delete();
 
         session()->flash('error', 'Part Deleted!');
-        return redirect(route('part.index'));
+        return redirect(route('index'));
     }
 
     public function category_parts(Request $request)
