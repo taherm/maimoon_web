@@ -74,6 +74,7 @@
                                         <option value="disk" {{ $part->category == 'disk' ? 'selected' : '' }}>Disk</option>
                                         <option value="arm" {{ $part->category == 'arm' ? 'selected' : '' }}>Arm</option>
                                         <option value="shocker" {{ $part->category == 'shocker' ? 'selected' : '' }}>Shocker</option>
+                                        <option value="condenser" {{ $part->category == 'condenser' ? 'selected' : '' }}>Condenser</option>
                                     </select>
                                 </div>
                             </div>

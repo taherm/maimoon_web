@@ -72,6 +72,7 @@
                                         <option value="disk">Disk</option>
                                         <option value="arm">Arm</option>
                                         <option value="shocker">Shocker</option>
+                                        <option value="condenser">Condenser</option>
                                     </select>
                                 </div>
                             </div>
