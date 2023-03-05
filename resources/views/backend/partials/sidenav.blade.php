@@ -74,6 +74,9 @@
                     <li>
                         <a href="{{route('category_parts',['category'=>'shocker'])}}">Shocker</a>
                     </li>
+                    <li>
+                        <a href="{{route('category_parts',['category'=>'condenser'])}}">Condenser</a>
+                    </li>
                 </ul>
             </li>
         </ul>
