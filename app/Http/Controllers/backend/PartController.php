@@ -45,7 +45,7 @@ class PartController extends Controller
         $data = $request->except('_token');
         $part = $part->create($data);
         session()->flash('message', 'Part Added!');
-        return redirect(route('index'));
+        return redirect(route('part.create'));
     }
 
     /**

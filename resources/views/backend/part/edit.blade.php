@@ -18,6 +18,17 @@
                             {{ method_field('PATCH') }}
                             <div class="form-row mb-4">
                                 <div class="form-group col-md-12">
+                                    <label for="inputState">Category</label>
+                                    <select id="inputState" name="category" class="form-control" required>
+                                        <option value="raditor" {{ $part->category == 'raditor' ? 'selected' : '' }}>Raditor</option>
+                                        <option value="disk" {{ $part->category == 'disk' ? 'selected' : '' }}>Disk</option>
+                                        <option value="arm" {{ $part->category == 'arm' ? 'selected' : '' }}>Arm</option>
+                                        <option value="shocker" {{ $part->category == 'shocker' ? 'selected' : '' }}>Shocker</option>
+                                        <option value="condenser" {{ $part->category == 'condenser' ? 'selected' : '' }}>Condenser</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group col-md-12">
                                     <label for="inputEmail4">Name</label>
                                     <input type="text" class="form-control" name="name" id="inputEmail4" value="{{$part->name}}" required>
                                     @error('name')
@@ -64,18 +75,6 @@
                                     @error('japan_price')
                                     <div class="alert alert-danger">{{ $message }}</div>
                                     @enderror
-                                </div>
-
-
-                                <div class="form-group col-md-12">
-                                    <label for="inputState">Category</label>
-                                    <select id="inputState" name="category" class="form-control" required>
-                                        <option value="raditor" {{ $part->category == 'raditor' ? 'selected' : '' }}>Raditor</option>
-                                        <option value="disk" {{ $part->category == 'disk' ? 'selected' : '' }}>Disk</option>
-                                        <option value="arm" {{ $part->category == 'arm' ? 'selected' : '' }}>Arm</option>
-                                        <option value="shocker" {{ $part->category == 'shocker' ? 'selected' : '' }}>Shocker</option>
-                                        <option value="condenser" {{ $part->category == 'condenser' ? 'selected' : '' }}>Condenser</option>
-                                    </select>
                                 </div>
                             </div>
                             <button type="submit" class="btn btn-primary mt-3">Edit Part</button>
