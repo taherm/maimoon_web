@@ -49,10 +49,10 @@
                                     <td class="checkbox-column text-center"> {{$part->id}} </td>
                                     <td class="text-center">{{$part->name}}</td>
                                     <td class="text-center">{{$part->part_number}}</td>
-                                    <td class="text-center">{{$part->china_price}}</td>
-                                    @unless($part->category=='disk') <td class="text-center">{{$part->taiwan_price}}</td> @endunless
+                                    <td class="text-center" style="color:orange">{{$part->china_price}}</td>
+                                    @unless($part->category=='disk') <td class="text-center" style="color:brown">{{$part->taiwan_price}}</td> @endunless
                                     @if($part->category=='arm' || $part->category=='shocker' || $part->category=='disk') <td class="text-center">{{$part->japan_price}}</td> @endif
-                                    @if( $part->category=='shocker') <td class="text-center">{{$part->kyb_price}}</td> @endif
+                                    @if( $part->category=='shocker') <td class="text-center" style="color:green">{{$part->kyb_price}}</td> @endif
                                     <td class="text-center">{{$part->category}}</td>
                                     <td class="text-center">
                                         <ul class="table-controls">
