@@ -19,4 +19,9 @@ Route::namespace('App\Http\Controllers\backend')->group(function () {
     Route::resource('part', PartController::class);
     Route::get('/delete_part/{part}', [App\Http\Controllers\backend\PartController::class, 'destroy'])->name('delete_part');
     Route::get('/category_parts/{category}', [App\Http\Controllers\backend\PartController::class, 'category_parts'])->name('category_parts');
+
+    // Bush & WB Routes.
+    Route::resource('bush', BushController::class);
+    Route::get('/category_bush/{category}', [App\Http\Controllers\backend\BushController::class, 'category_bush'])->name('category_bush');
+    Route::get('/delete_bush/{bush}', [App\Http\Controllers\backend\BushController::class, 'destroy'])->name('delete_bush');
 });
