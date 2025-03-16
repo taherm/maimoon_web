@@ -5,6 +5,8 @@
 <script src="{{asset('backend/plugins/perfect-scrollbar/perfect-scrollbar.min.js')}}"></script>
 <script src="{{asset('backend/assets/js/app.js')}}"></script>
 <script src="{{asset('backend/plugins/blockui/jquery.blockUI.min.js')}}"></script>
+<script src="{{asset('backend/plugins/flatpickr/flatpickr.js')}}"></script>
+<script src="{{asset('backend/plugins/flatpickr/custom-flatpickr.js')}}"></script>
 <script>
     $(document).ready(function() {
         App.init();
@@ -133,3 +135,7 @@
 
     multiCheck(c3);
 </script>
+
+@if(View::hasSection('edit_subscriber'))
+@yield('edit_subscriber')
+@endif

@@ -24,4 +24,6 @@ Route::namespace('App\Http\Controllers\backend')->group(function () {
     Route::resource('bush', BushController::class);
     Route::get('/category_bush/{category}', [App\Http\Controllers\backend\BushController::class, 'category_bush'])->name('category_bush');
     Route::get('/delete_bush/{bush}', [App\Http\Controllers\backend\BushController::class, 'destroy'])->name('delete_bush');
+
+    Route::resource('payment', PaymentController::class);
 });

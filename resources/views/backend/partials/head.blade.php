@@ -31,4 +31,6 @@
     <link href="{{asset('backend/plugins/lightbox/default-skin/default-skin.css')}}" rel="stylesheet" type="text/css" />
     <link href="{{asset('backend/plugins/lightbox/custom-photswipe.css')}}" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" type="text/css" href="{{asset('backend/assets/css/elements/alert.css')}}">
+    <link href="{{asset('backend/plugins/flatpickr/flatpickr.css')}}" rel="stylesheet" type="text/css">
+    <link href="{{asset('backend/plugins/flatpickr/custom-flatpickr.css')}}" rel="stylesheet" type="text/css">
 </head>
