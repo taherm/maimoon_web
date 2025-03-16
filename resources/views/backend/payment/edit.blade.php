@@ -8,7 +8,7 @@
                     <div class="widget-header">
                         <div class="row">
                             <div class="col-xl-12 col-md-12 col-sm-12 col-12">
-                                <h4>Edit Part</h4>
+                                <h4>Edit Payment</h4>
                             </div>
                         </div>
                     </div>
@@ -110,7 +110,7 @@
                                 </div>
                                 @endif
                             </div>
-                            <button type="submit" class="btn btn-primary mt-3">Edit Part</button>
+                            <button type="submit" class="btn btn-primary mt-3">Edit Payment</button>
                         </form>
                     </div>
                 </div>

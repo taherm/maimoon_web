@@ -5,6 +5,8 @@ namespace App\Http\Controllers\backend;
 use App\Http\Controllers\Controller;
 use App\Models\Payment;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
+
 
 class PaymentController extends Controller
 {
@@ -79,9 +81,21 @@ class PaymentController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Payment $payment)
     {
-        //
+        // Retrieve all records from request.
+        $data = $request->except('_token', '_method', 'action', 'MAX_FILE_SIZE');
+
+        //store post based on condition.
+        if ($request->image) {
+            Storage::delete($payment->image);
+            $data['image'] =  $request->image->store('public/images/payments');
+            $payment->update($data);
+        } else {
+            $payment->update($data);
+        }
+        session()->flash('message', __('Payment Updated'));
+        return redirect(route('admin.payment.index'));
     }
 
     /**
@@ -90,8 +104,15 @@ class PaymentController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Payment $payment)
     {
-        //
+        // Delete from Storage folder.
+        Storage::delete($payment->image);
+
+        // Delete record from DB.
+        $payment->delete();
+
+        session()->flash('error', __('Payment Deleted'));
+        return redirect(route('payment.index'));
     }
 }
