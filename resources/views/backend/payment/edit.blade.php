@@ -105,7 +105,8 @@
                                 @if($payment->image)
                                 <div class="form-group col-md-12">
                                     <div class="image-area">
-                                        <img width="100px" height="100px" src="{{Storage::disk('local')->url($payment->image)}}" alt="Preview">
+                                        <!-- <img width="100px" height="100px" src="{{Storage::disk('local')->url($payment->image)}}" alt="Preview"> -->
+                                        <a href="{{Storage::disk('local')->url($payment->image)}}" target="_blank">View File</a>
                                     </div>
                                 </div>
                                 @endif

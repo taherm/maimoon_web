@@ -37,6 +37,7 @@
                                     <th class="text-center">Receipt Number</th>
                                     <th class="text-center">Amount</th>
                                     <th class="text-center">Company</th>
+                                    <th class="text-center">Person</th>
                                     <th class="text-center">Image</th>
                                     <th class="text-center">Action</th>
                                 </tr>
@@ -49,9 +50,10 @@
                                     <td class="text-center">{{$payment->receipt_number}}</td>
                                     <td class="text-center" style="color:orange">{{$payment->amount}}</td>
                                     <td class="text-center">{{$payment->company_name}}</td>
+                                    <td class="text-center">{{$payment->person}}</td>
                                     <td class="text-center">
                                         <!-- <span><img src="" class="profile-img" alt="avatar"></span> -->
-                                        <span><img src="{{Storage::disk('local')->url($payment->image)}}" class="profile-img" alt="no image"></span>
+                                        <a href="{{Storage::disk('local')->url($payment->image)}}" target="_blank">View File</a>
                                     </td>
                                     <td class="text-center">
                                         <ul class="table-controls">
