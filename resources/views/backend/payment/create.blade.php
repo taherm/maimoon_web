@@ -99,7 +99,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <button type="submit" class="btn btn-primary mt-3">Add Part</button>
+                            <button type="submit" class="btn btn-primary mt-3">Add Payment</button>
                         </form>
                     </div>
                 </div>
