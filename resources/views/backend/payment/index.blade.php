@@ -7,7 +7,7 @@
                 <div class="widget-header">
                     <div class="row">
                         <div class="col-xl-6 col-md-6 col-sm-6 col-6">
-                            <h4>All Parts</h4>
+                            <h4>All Payments</h4>
                         </div>
                         @if($flash=session('message'))
                         <div class="col-xl-6 col-md-6 col-sm-6 col-6">

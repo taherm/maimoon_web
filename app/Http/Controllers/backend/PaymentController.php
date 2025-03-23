@@ -95,7 +95,7 @@ class PaymentController extends Controller
             $payment->update($data);
         }
         session()->flash('message', __('Payment Updated'));
-        return redirect(route('admin.payment.index'));
+        return redirect(route('payment.index'));
     }
 
     /**
