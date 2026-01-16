@@ -45,7 +45,9 @@ class PaymentController extends Controller
 
         $data = $request->except('_token', 'MAX_FILE_SIZE');
         // save post image.
-        $data['image'] =  $request->image->store('public/images/payments');
+        if ($request->image) {
+            $data['image'] =  $request->image->store('public/images/payments');
+        }
         $payment = $payment->create($data);
         session()->flash('message', 'Payment Added!');
         return redirect(route('payment.index'));

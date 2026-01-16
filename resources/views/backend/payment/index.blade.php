@@ -53,7 +53,7 @@
                                     <td class="text-center">{{$payment->person}}</td>
                                     <td class="text-center">
                                         <!-- <span><img src="" class="profile-img" alt="avatar"></span> -->
-                                        <a href="{{Storage::disk('local')->url($payment->image)}}" target="_blank">View File</a>
+                                        <a href="{{$payment->image ? Storage::disk('local')->url($payment->image) : '#'}}" target="_blank">View File</a>
                                     </td>
                                     <td class="text-center">
                                         <ul class="table-controls">

@@ -89,7 +89,7 @@
                                             <div class="custom-file-container" data-upload-id="myFirstImage">
                                                 <label>Upload Image (Size: 570 X 570px)<a href="javascript:void(0)" class="custom-file-container__image-clear" title="Clear Image">x</a></label>
                                                 <label class="custom-file-container__custom-file">
-                                                    <input type="file" name="image" class="custom-file-container__custom-file__custom-file-input" accept="image/*" required>
+                                                    <input type="file" name="image" class="custom-file-container__custom-file__custom-file-input" accept="image/*">
                                                     <input type="hidden" name="MAX_FILE_SIZE" value="10485760" />
                                                     <span class="custom-file-container__custom-file__custom-file-control"></span>
                                                 </label>
